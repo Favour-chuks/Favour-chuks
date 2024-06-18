@@ -1,19 +1,25 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
+import { motion, useCycle } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-function MenuButton() {
-  const [sidePanelWidth, setSidePanelWidth] = useState("0px");
+interface modalState {
+  setShowModal: Dispatch<SetStateAction<boolean>>;
+  showModal: boolean;
+}
 
-  const openSideNav = () => {
-    setSidePanelWidth("100vw");
-  };
-
-  const closeSideNav = () => {
-    setSidePanelWidth("0px");
-  };
+export default function MenuButton({ setShowModal, showModal }: modalState) {
+  const [animate, cycleAnimation] = useCycle(
+    { opacity: 0, width: "100px" },
+    { opacity: 1, width: "100vw" }
+  );
 
   const location = useLocation();
+
+  const openSideNav = () => {
+    !showModal ? (cycleAnimation(), console.log(location.key)) : null;
+  };
+  useEffect(openSideNav, [location]);
   return (
     <div>
       <span className="openbtn" onClick={openSideNav}>
@@ -26,11 +32,22 @@ function MenuButton() {
           <path d="M160-360v-80h640v80H160Zm0-160v-80h640v80H160Z" />
         </svg>
       </span>
-      <div
+      <motion.div
         id="mySidepanel"
         className="sidepanel"
-        style={{ width: sidePanelWidth }}>
-        <a href="#" className="closebtn" onClick={closeSideNav}>
+        initial={false}
+        animate={animate}
+        transition={{
+          opacity: { duration: 0.5 },
+          width: { duration: 0.5, delay: animate.opacity ? 0.1 : 0.1 },
+        }}
+        exit={animate}>
+        <a
+          href="#"
+          className="closebtn"
+          onClick={() => {
+            cycleAnimation();
+          }}>
           &times;
         </a>
 
@@ -39,30 +56,38 @@ function MenuButton() {
             className="menulink"
             to="/about"
             state={{ previousLocation: location }}
-            onClick={closeSideNav}>
+            onClick={() => {
+              setShowModal(true);
+            }}>
             About
           </Link>
 
-          <HashLink
+          <Link
             className="menulink"
-            to="/projects/#skillsandtools"
+            to="/projects"
             state={{ previousLocation: location }}
-            onClick={closeSideNav}>
+            onClick={() => {
+              setShowModal(true);
+            }}>
             Skills/Tools
-          </HashLink>
+          </Link>
 
           <HashLink
             className="menulink"
             to="/projects/#portfolio"
             state={{ previousLocation: location }}
-            onClick={closeSideNav}>
+            onClick={() => {
+              setShowModal(true);
+            }}>
             Projects
           </HashLink>
 
           <HashLink
             className="menulink"
             to="/about/#contact"
-            onClick={closeSideNav}
+            onClick={() => {
+              setShowModal(true);
+            }}
             state={{ previousLocation: location }}>
             Contact
           </HashLink>
@@ -70,14 +95,14 @@ function MenuButton() {
           <HashLink
             className="menulink"
             to="/about/#videos"
-            onClick={closeSideNav}
+            onClick={() => {
+              setShowModal(true);
+            }}
             state={{ previousLocation: location }}>
             Videos
           </HashLink>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
-
-export default MenuButton;

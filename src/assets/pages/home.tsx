@@ -1,11 +1,20 @@
-import Slideshow from "../component/imageSlider";
+import { Dispatch, SetStateAction } from "react";
 import MenuButton from "../component/menuButton";
-import Modal from "../component/modal";
-import About from "./about";
+import { motion } from "framer-motion";
 
-export default function HomePage() {
+interface modal {
+  setShowModal: Dispatch<SetStateAction<boolean>>;
+}
+const gridVariant = {
+  initial: {},
+  final: {},
+};
+export default function HomePage({ setShowModal }: modal) {
   return (
-    <section
+    <motion.section
+      variants={gridVariant}
+      initial="initial"
+      animate="final"
       id="grid-container"
       className="grid h-[100vh] grid-cols-[25%_minmax(0,_1fr)_100px] grid-rows-[100px_minmax(0,_1fr)_100px] bg-slate-100">
       {/* navigation section  */}
@@ -20,7 +29,7 @@ export default function HomePage() {
       <section className="section-container"></section>
       {/* menu section  */}
       <section className="section-container px-5 py-5 place-content-center">
-        <MenuButton />
+        <MenuButton setShowModal={setShowModal} showModal={false} />
       </section>
 
       {/* content section  */}
@@ -33,8 +42,7 @@ export default function HomePage() {
       </section>
       {/* main content  */}
       <section className="main-content section-container overflow-scroll overflow-x-hidden snap-proximity snap-y">
-      <Slideshow/>
-
+        {/* <Slideshow /> */}
       </section>
       <section className="section-container"></section>
 
@@ -55,7 +63,7 @@ export default function HomePage() {
           id="expand-footer"
           className="w-[2em] h-[40%] hover:drop-shadow-sm"
           onClick={() => {
-            return <Modal modalChildren={<About />} />;
+            // return <Modal modalChildren={<About />} />;
           }}>
           <svg
             className="motion-safe:animate-pulse"
@@ -69,6 +77,6 @@ export default function HomePage() {
         </button>
       </section>
       <section className="section-container"></section>
-    </section>
+    </motion.section>
   );
 }

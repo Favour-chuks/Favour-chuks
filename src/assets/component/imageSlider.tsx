@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "./testcomponents/testcomponent";
+import "../../../testcomponents/testscript";
 import "../../../public/images/RUNGGON.png";
 
 export default function Slideshow() {
