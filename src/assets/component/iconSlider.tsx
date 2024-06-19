@@ -69,7 +69,7 @@ const slides = [
         width="20px"
         height="20px"
         viewBox="0 0 512 512"
-        enable-background="new 0 0 512 512">
+        enableBackground="new 0 0 512 512">
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"

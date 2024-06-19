@@ -3,16 +3,24 @@ import EventModal from "./eventModal";
 
 interface bentoGridOptions {
   portfolioColor: string;
+  projectTitle: string;
+  projectIcon: string;
   projectLink: string;
   codeLink: string;
   portfolioDescription: string;
+  projectImgDesktop: string;
+  projectImgMobile: string;
 }
 
 function BentoGrid({
   portfolioColor,
+  projectTitle,
+  projectIcon,
   projectLink,
   codeLink,
   portfolioDescription,
+  projectImgDesktop,
+  projectImgMobile,
 }: bentoGridOptions) {
   const [showEvent, setShowEvent] = useState(false);
   const sectionColor = portfolioColor !== "" ? portfolioColor : "#e5e7eb";
@@ -39,11 +47,15 @@ function BentoGrid({
           style={{
             background: `${sectionColor}`,
           }}>
-          <img src="" alt="projectIcon" />
+          {projectIcon !== "" ? (
+            <img src={projectIcon} alt="projectIcon" />
+          ) : (
+            projectTitle
+          )}
         </div>
         {/* for mobile view */}
         <div className="gridSection relative grid place-items-center rounded-lg p-[1em] bg-gray-200 row-span-2 col-span-2">
-          mobile view
+          <img src={projectImgMobile} alt={projectTitle} />
         </div>
         {/* Project title */}
         <div
@@ -52,7 +64,7 @@ function BentoGrid({
             background: `${sectionColor}`,
             color: `${textColor}`,
           }}>
-          Avocado Stream
+          {projectTitle}
         </div>
         {/* main project image or desktop view */}
         <div
@@ -62,8 +74,15 @@ function BentoGrid({
           onMouseLeave={() => {
             setShowEvent(false);
           }}
-          className="gridSection grid place-items-center relative rounded-lg p-[1em] bg-red-200 col-span-3 row-span-2">
-          <span>hello world</span>
+          className="gridSection grid place-items-center relative rounded-lg col-span-3 row-span-2 overflow-auto"
+          style={{
+            background: `${sectionColor}`,
+          }}>
+          <img
+            src={projectImgDesktop}
+            alt={projectTitle}
+            className=" aspect-video"
+          />
           {showEvent && (
             <EventModal linkTo={projectPageLink} button={"visit site"} />
           )}

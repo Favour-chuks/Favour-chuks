@@ -1,5 +1,6 @@
 import BentoGrid from "../component/bentoGrid";
 import IconSlider from "../component/iconSlider";
+import "../../../public/images/RUNGGON.png";
 
 function Portfolio() {
   return (
@@ -11,12 +12,16 @@ function Portfolio() {
         <h2 className="text-4xl font-normal mb-8">Portfolio</h2>
         {/* i want this to be some kind of bento grid */}
         <BentoGrid
-          portfolioColor="green"
+          portfolioColor="#0587E9"
           projectLink={"www.facebook.com"}
-          codeLink={"www.facebook.com"}
+          codeLink={"github.com/Favour-chuks/Rungon"}
           portfolioDescription={
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis provident maxime dolorum officiis, ea ratione dignissimos modi doloribus sequi repellendus. Architecto ipsa aspernatur odit ullam labore consectetur necessitatibus sit?"
           }
+          projectTitle={"Runggon"}
+          projectImgDesktop={"../../../public/images/RUNGGON.png"}
+          projectImgMobile={""}
+          projectIcon={""}
         />
         <BentoGrid
           portfolioColor="green"
@@ -25,6 +30,10 @@ function Portfolio() {
           portfolioDescription={
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis provident maxime dolorum officiis, ea ratione dignissimos modi doloribus sequi repellendus. Architecto ipsa aspernatur odit ullam labore consectetur necessitatibus sit?"
           }
+          projectTitle={"Avocado Stream"}
+          projectImgDesktop={""}
+          projectImgMobile={""}
+          projectIcon={""}
         />
       </section>
     </>

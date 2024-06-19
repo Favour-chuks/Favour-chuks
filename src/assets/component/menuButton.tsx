@@ -17,7 +17,7 @@ export default function MenuButton({ setShowModal, showModal }: modalState) {
   const location = useLocation();
 
   const openSideNav = () => {
-    !showModal ? (cycleAnimation(), console.log(location.key)) : null;
+    !showModal ? cycleAnimation() : null;
   };
   useEffect(openSideNav, [location]);
   return (
