@@ -6,10 +6,10 @@ Welcome to **Favour-Chuks**, my personal portfolio website! This platform is des
 
 ## Key Projects
 
-### 1. [Rungon](#)
+### 1. [Rungon](https://github.com/Favour-chuks/Rungon)
 Rungon is a comprehensive real estate web application that streamlines property listings and management. It’s built with a focus on user experience, providing an intuitive interface for both real estate professionals and clients. Key features include a property search function, detailed property listings, and user account management.
 
-### 2. [Avo PicPalette](#)
+### 2. [Avo PicPalette][(#)](https://github.com/Favour-chuks/Avo-PicPalette)
 Avo PicPalette is a creative tool designed for designers and developers. It allows users to extract hex color codes from any image, making it easier to create color palettes inspired by real-world visuals. Simply upload an image, and Avo PicPalette will generate the corresponding hex codes for you.
 
 ## Special Features
