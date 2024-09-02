@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Favour-Chuks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Welcome to **Favour-Chuks**, my personal portfolio website! This platform is designed to showcase my completed projects and attract freelance clients. As a full-stack developer with a passion for creating intuitive and visually appealing web applications, I built this portfolio to highlight my skills and the unique value I bring to each project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Projects
 
-## Expanding the ESLint configuration
+### 1. [Rungon](#)
+Rungon is a comprehensive real estate web application that streamlines property listings and management. It’s built with a focus on user experience, providing an intuitive interface for both real estate professionals and clients. Key features include a property search function, detailed property listings, and user account management.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 2. [Avo PicPalette](#)
+Avo PicPalette is a creative tool designed for designers and developers. It allows users to extract hex color codes from any image, making it easier to create color palettes inspired by real-world visuals. Simply upload an image, and Avo PicPalette will generate the corresponding hex codes for you.
 
-- Configure the top-level `parserOptions` property like this:
+## Special Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **Smooth Animations**: The portfolio website is enhanced with smooth and subtle animations, creating a seamless and engaging experience for users. From hover effects to page transitions, these animations add a layer of sophistication to the user interface.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Live Preview
+
+Explore my portfolio online and see my work in action. Whether you're interested in hiring me for your next project or simply browsing for inspiration, you're welcome to take a look!
+
+[Visit the Portfolio](#)
+
+## Contact
+
+I'm always open to new opportunities and collaborations. If you'd like to discuss a project or get in touch, here’s how you can reach me:
+
+- **Email**: [okolofavour1818@gmail.com](okolofavour1818@gmail.com)
+- **LinkedIn**: [Okolo Favour Chuks](https://www.linkedin.com/in/favour-chuks/)
+
+## License
+
+This project is licensed under the MIT License. For more details, please see the `LICENSE` file.
+
