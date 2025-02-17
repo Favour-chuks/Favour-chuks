@@ -26,7 +26,7 @@ Explore my portfolio online and see my work in action. Whether you're interested
 
 I'm always open to new opportunities and collaborations. If you'd like to discuss a project or get in touch, here’s how you can reach me:
 
-- **Email**: [okolofavour1818@gmail.com](okolofavour1818@gmail.com)
+- **Email**: [okolofavour1818@gmail.com](mailto:okolofavour1818@gmail.com)
 - **LinkedIn**: [Okolo Favour Chuks](https://www.linkedin.com/in/favour-chuks/)
 - **Portfolio**: [Okolo Favour Chuks](https://my-portfolio-favour-chuks-projects.vercel.app)
 
