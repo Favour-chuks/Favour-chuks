@@ -28,6 +28,7 @@ I'm always open to new opportunities and collaborations. If you'd like to discus
 
 - **Email**: [okolofavour1818@gmail.com](okolofavour1818@gmail.com)
 - **LinkedIn**: [Okolo Favour Chuks](https://www.linkedin.com/in/favour-chuks/)
+- **Portfolio**: [Okolo Favour Chuks](https://my-portfolio-favour-chuks-projects.vercel.app/#)
 
 ## License
 
