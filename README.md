@@ -20,7 +20,7 @@ Avo PicPalette is a creative tool designed for designers and developers. It allo
 
 Explore my portfolio online and see my work in action. Whether you're interested in hiring me for your next project or simply browsing for inspiration, you're welcome to take a look!
 
-[Visit the Portfolio](#)
+[Visit the Portfolio](https://my-portfolio-favour-chuks-projects.vercel.app)
 
 ## Contact
 
